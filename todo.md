@@ -16,11 +16,11 @@
 - [x] `docker-compose.yml`（Phoenixイメージのバージョン固定）
 - [x] `.env.example` / `.gitignore`
 - [x] `scripts/start_vllm.sh` / `scripts/check_services.sh` / `scripts/check_environment.py`
-- [ ] `src/common/config.py`：環境変数ロード
-- [ ] `src/common/llm.py`：共通LLMクライアント（OpenAI互換・Qwen3 thinking無効化・モック可能）
-- [ ] `src/common/phoenix_client.py`：Phoenix Client生成・疎通確認
-- [ ] `src/common/tracing.py`：`phoenix.otel.register` によるTracer設定
-- [ ] Phoenix起動・vLLM接続・SDK接続を確認
+- [x] `src/common/config.py`：環境変数ロード
+- [x] `src/common/llm.py`：共通LLMクライアント（OpenAI互換・Qwen3 thinking無効化・モック可能）
+- [x] `src/common/phoenix_client.py`：Phoenix Client生成・疎通確認
+- [x] `src/common/tracing.py`：`phoenix.otel.register` によるTracer設定
+- [x] Phoenix起動・vLLM接続・SDK接続を確認
 
 ## Phase 2：Demo 1 — LLM as a Judge（`feature/demo1-llm-judge`）
 
