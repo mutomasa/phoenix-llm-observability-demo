@@ -11,11 +11,11 @@
 
 ## Phase 1：基盤構築（`feature/project-setup`, `feature/common`）
 
-- [ ] uvでプロジェクト初期化・依存追加・`uv.lock`固定
-- [ ] ディレクトリ構成作成
-- [ ] `docker-compose.yml`（Phoenixイメージのバージョン固定）
-- [ ] `.env.example` / `.gitignore`
-- [ ] `scripts/start_vllm.sh` / `scripts/check_services.sh` / `scripts/check_environment.py`
+- [x] uvでプロジェクト初期化・依存追加・`uv.lock`固定
+- [x] ディレクトリ構成作成
+- [x] `docker-compose.yml`（Phoenixイメージのバージョン固定）
+- [x] `.env.example` / `.gitignore`
+- [x] `scripts/start_vllm.sh` / `scripts/check_services.sh` / `scripts/check_environment.py`
 - [ ] `src/common/config.py`：環境変数ロード
 - [ ] `src/common/llm.py`：共通LLMクライアント（OpenAI互換・Qwen3 thinking無効化・モック可能）
 - [ ] `src/common/phoenix_client.py`：Phoenix Client生成・疎通確認
