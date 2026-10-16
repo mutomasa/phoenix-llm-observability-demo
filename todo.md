@@ -24,16 +24,16 @@
 
 ## Phase 2：Demo 1 — LLM as a Judge（`feature/demo1-llm-judge`）
 
-- [ ] QAデータセット20件以上（正解/一部誤り/無関係/不完全/ハルシネーション + 人手期待ラベル）
-- [ ] JSONLローダー（Pydantic検証）
-- [ ] Qwenによる回答生成（プロンプト2種：baseline / detailed）
-- [ ] Judge実装（Correctness / Relevance / Faithfulness / Completeness）
-- [ ] JSON Schema検証とリトライ
-- [ ] Phoenix Dataset登録（`qa-evaluation-dataset`）
-- [ ] Experiment実行（2種類のプロンプト）
-- [ ] Judgeと人手ラベルの一致率計算
-- [ ] CLI（`--dataset`, `--experiment`）
-- [ ] 単体テスト（モックLLM）
+- [x] QAデータセット20件以上（正解/一部誤り/無関係/不完全/ハルシネーション + 人手期待ラベル）
+- [x] JSONLローダー（Pydantic検証）
+- [x] Qwenによる回答生成（プロンプト2種：baseline / detailed）
+- [x] Judge実装（Correctness / Relevance / Faithfulness / Completeness）
+- [x] JSON Schema検証とリトライ
+- [x] Phoenix Dataset登録（`qa-evaluation-dataset`）
+- [x] Experiment実行（2種類のプロンプト）
+- [x] Judgeと人手ラベルの一致率計算
+- [x] CLI（`--dataset`, `--experiment`）
+- [x] 単体テスト（モックLLM）
 
 ## Phase 3：Demo 2 — LangGraph Tracing（`feature/demo2-langgraph`）
 
