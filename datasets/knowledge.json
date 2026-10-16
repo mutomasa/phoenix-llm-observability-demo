@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Arize Phoenix",
+    "keywords": ["phoenix", "フェニックス", "arize", "オブザーバビリティ"],
+    "content": "Arize PhoenixはオープンソースのLLMオブザーバビリティ基盤で、Trace・Span の可視化、Dataset と Experiment による評価、LLM as a Judge を提供する。"
+  },
+  {
+    "title": "LangGraph",
+    "keywords": ["langgraph", "ラングラフ", "エージェント", "agent"],
+    "content": "LangGraphは状態（State）を持つグラフとしてAI Agentを構築するフレームワークで、ノードと条件付きエッジでループや分岐を表現できる。"
+  },
+  {
+    "title": "OpenTelemetry",
+    "keywords": ["opentelemetry", "otel", "トレース", "span"],
+    "content": "OpenTelemetryは分散トレース・メトリクス・ログを収集するための標準仕様とSDKで、TraceはSpanの木構造で処理の親子関係と時間を表す。"
+  },
+  {
+    "title": "OpenInference",
+    "keywords": ["openinference", "計装", "instrumentation"],
+    "content": "OpenInferenceはOpenTelemetry上でLLMアプリ向けのSpan属性（LLM・TOOL・CHAINなどのSpan種別、入出力、トークン数）を定義する規約と自動計装ライブラリ群である。"
+  },
+  {
+    "title": "vLLM",
+    "keywords": ["vllm", "推論", "serving"],
+    "content": "vLLMはPagedAttentionによりGPUメモリを効率的に使う高速なLLM推論エンジンで、OpenAI互換APIサーバーを提供する。"
+  }
+]
