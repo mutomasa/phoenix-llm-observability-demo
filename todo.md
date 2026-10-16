@@ -37,14 +37,14 @@
 
 ## Phase 3：Demo 2 — LangGraph Tracing（`feature/demo2-langgraph`）
 
-- [ ] AgentState定義
-- [ ] ツール：Calculator / Knowledge Search（ローカルJSON）/ Current Date
-- [ ] Planner / Tool Executor / Answer Generator / Reviewer ノード
-- [ ] Retry上限付き条件分岐グラフ
-- [ ] シナリオフラグ（normal / retry / error）で決定的に再現
-- [ ] OpenInference LangChain Instrumentor 計装 + 手動Span
-- [ ] CLI（`--scenario`）
-- [ ] 単体テスト（モックLLM・InMemorySpanExporter）
+- [x] AgentState定義
+- [x] ツール：Calculator / Knowledge Search（ローカルJSON）/ Current Date
+- [x] Planner / Tool Executor / Answer Generator / Reviewer ノード
+- [x] Retry上限付き条件分岐グラフ
+- [x] シナリオフラグ（normal / retry / error）で決定的に再現
+- [x] OpenInference LangChain Instrumentor 計装 + 手動Span
+- [x] CLI（`--scenario`）
+- [x] 単体テスト（モックLLM・InMemorySpanExporter）
 
 ## Phase 4：品質確認（`feature/quality-docs`）
 
