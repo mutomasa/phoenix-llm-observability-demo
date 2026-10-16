@@ -48,11 +48,17 @@
 
 ## Phase 4：品質確認（`feature/quality-docs`）
 
-- [ ] pytest全件パス
-- [ ] ruff lint
-- [ ] vLLM切断時のエラー処理
-- [ ] Phoenix切断時のエラー処理
-- [ ] Retry上限の検証
-- [ ] Traceの親子関係の確認
-- [ ] 実機（vLLM + Phoenix）で両デモ実行
-- [ ] READMEに起動・停止手順とPhoenix確認ポイントを記載
+- [x] pytest全件パス
+- [x] ruff lint
+- [x] vLLM切断時のエラー処理
+- [x] Phoenix切断時のエラー処理
+- [x] Retry上限の検証
+- [x] Traceの親子関係の確認
+- [x] 実機（vLLM + Phoenix）で両デモ実行
+- [x] READMEに起動・停止手順とPhoenix確認ポイントを記載
+
+## 未解決（Issues）
+
+- [ ] #3 Qwen3-1.7B Judge と人手ラベルの一致率改善
+- [ ] #4 Experiment の Trace を `demo-llm-judge` Project でも見られるようにする
+- [ ] #5 `scripts/start_vllm.sh` 単独起動での再検証（現在は他プロジェクトの vLLM を共有）
