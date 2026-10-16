@@ -7,6 +7,7 @@
 
 import re
 
+import httpx
 import openai
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -20,6 +21,18 @@ _THINK_BLOCK = re.compile(r"<think>.*?</think>", re.DOTALL)
 
 class LLMConnectionError(RuntimeError):
     """vLLM に接続できない場合に送出する。"""
+
+
+def check_llm_health(base_url: str, timeout: float = 5.0) -> None:
+    """vLLM の `/models` に到達できるか確認する。"""
+    url = f"{base_url.rstrip('/')}/models"
+    try:
+        httpx.get(url, timeout=timeout).raise_for_status()
+    except httpx.HTTPError as exc:
+        raise LLMConnectionError(
+            f"LLMサーバーに接続できません（{url}）。"
+            f"`scripts/start_vllm.sh` を確認してください: {exc}"
+        ) from exc
 
 
 def strip_thinking(text: str) -> str:

@@ -1,6 +1,8 @@
 """OpenTelemetry / OpenInference によるトレーシング設定。"""
 
-from openinference.instrumentation.langchain import LangChainInstrumentor
+from openinference.instrumentation.langchain import LangChainInstrumentor, get_current_span
+from opentelemetry import trace
+from opentelemetry.context import Context
 from opentelemetry.sdk.trace import TracerProvider
 from phoenix.otel import register
 
@@ -33,3 +35,13 @@ def shutdown_tracing(tracer_provider: TracerProvider) -> None:
     """バッファ中の Span を送信してから終了する。"""
     tracer_provider.force_flush()
     tracer_provider.shutdown()
+
+
+def langchain_parent_context() -> Context | None:
+    """実行中の LangChain/LangGraph ノードの Span を親とする Context を返す。
+
+    OpenInference の LangChain 計装は OTel の current context を更新しないため、
+    手動 Span をノードの子にするにはこの Context を明示的に渡す必要がある。
+    """
+    parent = get_current_span()
+    return trace.set_span_in_context(parent) if parent is not None else None
