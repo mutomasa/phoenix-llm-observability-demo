@@ -1,0 +1,14 @@
+services:
+  phoenix:
+    # 検証済みバージョンに固定（latestは使わない）
+    image: arizephoenix/phoenix:20.23.0
+    ports:
+      - "127.0.0.1:6006:6006"
+    environment:
+      PHOENIX_WORKING_DIR: /mnt/data
+    volumes:
+      - phoenix_data:/mnt/data
+    restart: unless-stopped
+
+volumes:
+  phoenix_data:
