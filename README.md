@@ -1,5 +1,7 @@
 # phoenix-llm-observability-demo
 
+![Phoenix Web コンソールでのデモ：LangGraph の Trace と LLM as a Judge の Experiment 比較](docs/assets/demo.gif)
+
 Arize Phoenix を使って、ローカルの Qwen3 + vLLM で次の2つを体験するデモです。
 
 | デモ | 内容 | Phoenix での確認先 |
@@ -158,6 +160,14 @@ START → planner → tool_executor → answer_generator → reviewer ─┬─ 
 uv run pytest               # 単体テスト（GPU・Phoenix 不要。LLM はフェイクモデルで置き換える）
 uv run ruff check .         # Lint
 uv run ruff format .        # フォーマット
+```
+
+### デモ GIF の再録画
+
+両デモを実行して Phoenix に Trace と Experiment がそろった状態で、次を実行します。Playwright で Web コンソールを操作して録画し、ffmpeg で `docs/assets/demo.gif` に変換します。
+
+```bash
+uv run --with playwright python scripts/record_demo.py
 ```
 
 ```text
